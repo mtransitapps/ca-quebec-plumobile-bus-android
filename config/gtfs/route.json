@@ -1,9 +1,12 @@
 {
     "default_route_id_enabled": true,
     "use_route_short_name_for_route_id": true,
+    "route_id_cleanup_regex": "^zenbus:Line:|:LOC$",
     "default_route_long_name_enabled": true,
     "direction_finder_enabled": true,
     "trip_headsign_remove_via": true,
     "trip_headsign_cleaners": [],
+    "use_stop_id_hash_code": true,
+    "stop_id_cleanup_regex": "^zenbus:(StopPoint:SP|StopArea:SA):|:LOC$",
     "stop_name_cleaners": []
 }
