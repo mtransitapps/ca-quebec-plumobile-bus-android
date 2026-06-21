@@ -1,9 +1,26 @@
 {
     "default_route_id_enabled": true,
     "use_route_short_name_for_route_id": true,
+    "route_id_cleanup_regex": "^zenbus:Line:|:LOC$",
     "default_route_long_name_enabled": true,
+    "route_long_name_cleaners": [
+        {
+            "regex": "^(ligne\\s*)?\\d+\\s*-\\s*",
+            "ignore_case": true,
+            "comment": "Remove starts with route short name"
+        }
+    ],
     "direction_finder_enabled": true,
+    "direction_splitter_enabled": true,
     "trip_headsign_remove_via": true,
-    "trip_headsign_cleaners": [],
+    "trip_headsign_cleaners": [
+        {
+            "regex": "^.+\\s*>\\s*",
+            "ignore_case": true,
+            "comment": "remove 'from > '"
+        }
+    ],
+    "use_stop_id_hash_code": true,
+    "stop_id_cleanup_regex": "^zenbus:(StopPoint:SP|StopArea:SA):|:LOC$",
     "stop_name_cleaners": []
 }
